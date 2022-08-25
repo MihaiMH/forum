@@ -1,0 +1,243 @@
+.profile{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    border: 5px double rgba(16, 34, 125, 0.749);
+}
+
+.profile h1{
+    margin-left:10px;
+    margin-right:170px;
+}
+
+.btn {
+    background-color: rgba(74, 117, 181, 0.445);
+    border: 5px rgba(74, 117, 181, 0.445);
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    margin-right:4px;
+    margin-top:1px;
+    margin-bottom:1px;
+}
+
+.btn:hover {
+    background-color: rgba(36, 102, 200, 0.916);
+    border: 5px rgba(36, 102, 200, 0.916);
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    margin-right:4px;
+    margin-top:1px;
+    margin-bottom:1px;
+    transition: 0.3s linear;
+}
+
+.btns{
+    margin-right:10px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+
+.crpost{
+    border: 5px double rgba(16, 34, 125, 0.749);
+    display:flex;
+    flex-direction:column;
+    background-color: rgba(139, 227, 245, 0.1);
+}
+
+.crpost h1{
+    margin-left:10px;
+}
+
+.txtpostbtn textarea{
+    width:99%;  
+    background-color: rgba(139, 227, 245, 0.1);
+    border-color:rgba(67, 219, 249, 0.208);
+    border: 5px double rgba(16, 34, 125, 0.749);
+    border-radius: 20px;
+    font-size:15px;
+    padding-top:5px;
+    padding-left:3px;
+}
+
+.txtpostbtn button{
+    float:right;
+    margin-top:3px;
+    margin-right:10px;
+    background-color: rgba(27, 76, 148, 0.285);
+    border: 3px rgba(27, 76, 148, 0.285);
+    border-radius: 5px;
+    width: 110px;
+    height: 30px;
+    margin-bottom:8px;
+}
+
+.txtpostbtn button:hover{
+    float:right;
+    margin-top:3px;
+    margin-right:10px;
+    background-color: rgba(36, 102, 200, 0.916);
+    border: 3px rgba(23, 95, 204, 0.805);
+    border-radius: 5px;
+    width: 110px;
+    height: 30px;
+    transition: 0.3s linear;
+    margin-bottom:8px;
+}
+
+.container{
+
+    background-color: rgba(67, 219, 249, 0.208);
+}
+
+.posts{
+    border: 5px double rgba(16, 34, 125, 0.749);
+    background-color: rgba(139, 227, 245, 0.308);
+}
+
+.posts h1{
+    margin-left:10px;
+    padding-top:0px;
+}
+
+.poxt{
+    background-color: rgba(139, 227, 245, 0.499);
+    display:flex;
+    flex-direction:column;
+    border: 5px double rgba(16, 34, 125, 0.749);
+    border-radius: 20px;
+    margin-bottom:5px;
+}
+
+.poxt h3{
+    margin-left:13px;
+    font-size:20px;
+}
+
+.poxt p{
+    margin-left:13px;
+    font-size:18px;
+
+}
+
+.btns2{
+    margin-left:10px;
+    float:right;
+    margin-bottom:10px;
+}
+
+.txtfrum{
+    width:99%;  
+    background-color: rgba(106, 167, 252, 0.659);
+    border-color:rgba(67, 219, 249, 0.208);
+    border: 5px double rgba(16, 34, 125, 0.749);
+    border-radius: 20px;
+    font-size:15px;
+    padding-top:5px;
+    padding-left:3px;
+}
+
+.btns3{
+    margin-bottom:10px;
+    margin-left:10px;
+}
+
+
+footer{
+    background-color: rgba(106, 167, 252, 0.659);
+    border-color:rgba(67, 219, 249, 0.208);
+    border: 5px double rgba(16, 85, 125, 0.749);
+}
+
+footer h4{
+    margin-left:8px;
+}
+
+footer{
+    display:flex;
+    flex-direction:row;
+    
+    align-items: center;
+}
+
+footer button{
+    margin:0 auto;
+}
+
+.buli img{
+	width:25px;
+	animation: bubble 7s linear infinite;
+		z-index:-1;opacity:0;
+}
+
+.buli{
+	width:99%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	bottom:-240px;
+}
+
+@keyframes bubble{
+	0%{
+		transform:translateY(0);
+		opacity:0;
+	}
+	50%{
+	
+		opacity:0.5;
+	}
+	70%{
+		
+		opacity:0.5;
+	}
+	100%{
+		transform:translateY(-80vh);
+		opacity:0;
+	}
+}
+
+.buli img:nth-child(1){
+	animation-delay:2.3s;
+		width:30px;
+}
+.buli img:nth-child(2){
+	animation-delay:0s;
+		width:25px;
+}
+.buli img:nth-child(3){
+	animation-delay:5s;
+		width:35px;
+}
+.buli img:nth-child(4){
+	animation-delay:6s;
+		width:20px;
+}
+
+.buli img:nth-child(5){
+	animation-delay:1.5s;
+		width:25px;
+}
+
+.buli img:nth-child(6){
+	animation-delay:7.5s;
+		width:25px;
+}
+
+.buli img:nth-child(7){
+	animation-delay:5s;
+		width:30px;
+}
+.buli img:nth-child(8){
+	animation-delay:7s;
+		width:15px;
+}
+.buli img:nth-child(9){
+	animation-delay:3s;
+		width:20px;
+}

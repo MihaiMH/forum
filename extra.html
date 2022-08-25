@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="extra.css">
+    <title>Document</title>
+</head>
+<body style="background-image:url('/poze/bg.jpg'); background-repeat: no-repeat;
+background-position:center;
+background-size:cover;
+height:95vh;
+">
+    
+    <div class="xotext">
+        <h1>X si O</h1>
+        </div>
+      
+        <div class="tdr">
+            <table>
+        <tr>
+        <td onclick="step(this)" id="td0"></td>
+        <td onclick="step(this)" id="td1"></td>
+        <td onclick="step(this)" id="td2"></td>
+        </tr>
+        <tr>
+        <td onclick="step(this)" id="td3"></td>
+        <td onclick="step(this)" id="td4"></td>
+        <td onclick="step(this)" id="td5"></td>
+        </tr>
+        <tr>
+        <td onclick="step(this)" id="td6"></td>
+        <td onclick="step(this)" id="td7"></td>
+        <td onclick="step(this)" id="td8"></td>
+        </tr>
+        </table>
+        </div>
+        <br><br>
+        <div class="buton">
+            <button class="btn" onclick="javascript:history.go(0)">Restart</button>
+            <a href="forum.html"><button class="btn">Inapoi la forum</button></a>
+        </div>
+
+        
+
+        <script>
+        var num=0;
+        function step(t){
+            if(t.innerHTML==""){
+                if(num%2==0){t.innerHTML="X";}
+                else{t.innerHTML="O";}
+                num++;
+                analizacelula(t);
+            }
+            else{alert("Aceasta casuta este deja ocupata, alegeti alta.");}
+        }
+        function analizacelula(t){
+            var tr=t.parentNode.parentNode;
+            var el=new Array();
+            for(var i=0; i<9;i++){
+            el[i]=tr.getElementsByTagName("td")[i].innerHTML;}
+            var win=false;
+            if(el[0]==el[1] && el[1]==el[2] && el[0]==el[2] && (el[0]=="X" || el[0]=="O"))
+            {alert(el[0]+" Win"); 	win=true;} 
+            if(el[3]==el[4] && el[4]==el[5] && el[3]==el[5] && (el[3]=="X" || el[3]=="O"))
+            {alert(el[3]+" Win"); 	win=true;}
+            if(el[6]==el[7] && el[7]==el[8] && el[6]==el[8] && (el[6]=="X" || el[6]=="O"))
+            {alert(el[6]+" Win"); 	win=true;}
+            if(el[0]==el[3] && el[3]==el[6] && el[0]==el[6] && (el[0]=="X" || el[0]=="O"))
+            {alert(el[0]+" Win");	win=true;}
+            if(el[1]==el[4] && el[4]==el[7] && el[1]==el[7] && (el[1]=="X" || el[1]=="O"))
+            {alert(el[1]+" Win");	win=true;}
+            if(el[2]==el[5] && el[5]==el[8] && el[2]==el[8] && (el[2]=="X" || el[2]=="O"))
+            {alert(el[2]+" Win");	win=true;}
+            if(el[0]==el[4] && el[4]==el[8] && el[0]==el[8] && (el[0]=="X" || el[0]=="O"))
+            {alert(el[0]+" Win");	win=true;}
+            if(el[2]==el[4] && el[4]==el[6] && el[2]==el[6] && (el[2]=="X" || el[2]=="O"))
+            {alert(el[2]+" Win");	win=true;}
+        
+        if(win==true){
+            for(var i=0; i<0; i++){
+                tr.getElementsByTagName("td")[i].innerHTML="";
+            }
+            win=false;
+            num=0; 
+        }
+        
+        function res(){ Program.restart(); }
+        
+        }
+        </script>
+</body>
+</html>
